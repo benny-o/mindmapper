@@ -1,6 +1,6 @@
 (function () {
     var io;
-    io = require('socket.io').listen(80);
+    io = require('socket.io').listen(process.env.PORT);
     io.sockets.on('connection', function(socket) {
         socket.on('connectDraw', function(data) {
             socket.broadcast.emit('connectDraw', {
