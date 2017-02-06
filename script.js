@@ -343,7 +343,7 @@ function CanvasState(canvas) {
 	/* ------------- Connection Handling ------------- */
 
 
-    this.socket = io();
+    this.socket = io.connect('http://localhost:80');
 
 	this.socket.on('connectDraw', function(data) {
         myState.tree = new Tree(data.tree._root.xCoord, data.tree._root.yCoord);

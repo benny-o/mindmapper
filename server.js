@@ -1,11 +1,6 @@
-var express = require('express');
-var app = express();
-var server = require('http').createServer(app);
-var port = process.env.PORT || 3000;
-
 (function () {
     var io;
-    io = require('socket.io')(server).listen(port);
+    io = require('socket.io').listen(80);
     io.sockets.on('connection', function(socket) {
         socket.on('connectDraw', function(data) {
             socket.broadcast.emit('connectDraw', {
