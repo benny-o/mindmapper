@@ -1,20 +1,19 @@
 {
   "name": "mindmapper",
   "version": "1.0.0",
-  "description": "A cooperative mindmapping solution.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "description": "Multiuser mindmapping tool",
+  "dependencies": {
+      "express": "~2.5.8",
+      "ejs": "~0.7.1",
+      "socket.io": "~0.9.6"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benny-o/mindmapper.git"
+    "url": "git://github.com/evennode/mindmapper"
   },
-  "author": "Benny Onaitis",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/benny-o/mindmapper/issues"
-  },
-  "homepage": "https://github.com/benny-o/mindmapper#readme"
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.4.8",
+    "socket.io": "^1.1.0"
+  }
 }
